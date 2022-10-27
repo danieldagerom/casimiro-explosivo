@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Não toque!</title>
+</head>
+<body>
+    <h1>Não toque no Casimiro...</h1>
+    <button >
+        <img src="https://s2.glbimg.com/BQYMRNvV-rqLrWxNwCHaI8qA6_M=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2022/T/9/eTHsI7QO6y3fSIBqtYyw/casimiro.jpg" 
+            alt="foto muito doida do casé" 
+            width="300px" 
+            height="200px"
+        >
+    </button>
+    <h3>Nem aumente o volume...</h3>
+    <audio id="player"></audio>
+
+    <script>
+        const button = document.querySelector('button')
+        button.addEventListener('click', function(){
+            var player = document.getElementById('player')
+
+            var tracks = [
+                'case01.mp3',
+                'case02.mp3',
+                'case03.mp3',
+                'case04.mp3',
+                'case05.mp3',
+                'case06.mp3',
+                'case07.mp3',
+                'case08.mp3',
+                'case09.mp3',
+                'case10.mp3'
+            ]
+            
+            var track = tracks[Math.floor(Math.random() * tracks.length)]
+            player.src = track
+            player.play()
+        })
+    </script>
+    
+</body>
+</html>
